@@ -7,11 +7,13 @@ body {
   font-family: "Lato", sans-serif;
   padding: 0;
   margin: 0;
+  background-color: #fef6ec;
+  overflow-x:auto;
 }
 #main {
   transition: margin-left .5s;
-  float: left;
-  background-color: #fef6ec;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 .sidebar{
     float:left;
@@ -25,11 +27,12 @@ body {
   z-index: 1;
   top: 0;
   left: 50px;
-  background-color: #ffffff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   float: left;
+  margin-right: 50px;
+  background-color: white;
 }
 
 .sidenav a {
@@ -58,8 +61,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 50px;
-    
-
 }
 
 #closeNav{
@@ -76,6 +77,7 @@ body {
 
 
 
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -83,12 +85,14 @@ body {
 </style>
 </head>
 <body>
+
 <div id ="sidebar" class="sidebar">
     	<span id="openNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <span id="closeNav" style="font-size:40px;cursor:pointer" onclick="closeNav()">&times;</span>
         <img class="logo" src="https://media.cargocollective.com/1/5/189433/headerimg/Untitled-3-VER-half.png"/>
         
 </div>
+
 <div id="mySidenav" class="sidenav">
   <a href="#">About</a>
   <a href="#">Services</a>
@@ -98,7 +102,14 @@ body {
 
 
 <div id="main">
-  content go brrrrrr!
+  <div>
+    <img src="https://payload.cargocollective.com/1/5/189433/14560444/HOSI5_01_467.jpg" width="467" height="623" />		
+  </div> 
+  <p>
+      elRaise<br />
+      Caracas, Venezuela<br />
+      2023
+  </p>
 </div>
 
 <script>
