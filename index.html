@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#main {
+  transition: margin-left .5s;
+  float: left;
+}
+.sidebar{
+    background-color: #6e6e6e;
+    float:left;
+    width: 50px;
+    height: 100vh;
+    margin: 0;
+}
+.sidenav {
+  height: 100vh;
+  width: 0;
+  z-index: 1;
+  top: 0;
+  left: 50px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  float: left;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#openNav{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+    background-color: yellow;
+    
+
+}
+
+#closeNav{
+	display: none;
+     justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: yellow;
+  
+}
+
+.logo{
+  width: 100%;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div id ="sidebar" class="sidebar">
+    	<span id="openNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <span id="closeNav" style="font-size:40px;cursor:pointer" onclick="closeNav()">&times;</span>
+        <img class="logo" src="https://media.cargocollective.com/1/5/189433/headerimg/Untitled-3-VER-half.png"/>
+        
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<div id="main">
+  content go brrrrrr!
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  //document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("openNav").style.display = "none";
+  document.getElementById("closeNav").style.display = "flex";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  //document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("openNav").style.display = "flex";
+  document.getElementById("closeNav").style.display = "none";
+}
+</script>
+   
+</body>
+</html> 
